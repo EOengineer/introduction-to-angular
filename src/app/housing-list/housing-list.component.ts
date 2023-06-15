@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { HousingLocation } from '../housing-location';
 
 @Component({
   selector: 'app-housing-list',
@@ -11,6 +12,8 @@ export class HousingListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @Input() locationList: HousingLocation[] = [];
 
   searchHousingLocations(searchText: string) {
     console.log(searchText);
